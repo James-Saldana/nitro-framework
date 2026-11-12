@@ -1,0 +1,45 @@
+{
+    "name": "nitro/framework",
+    "description": "Nitro: a production-grade micro-framework for modern PHP 8.3+.",
+    "type": "project",
+    "license": "MIT",
+    "keywords": [
+        "framework",
+        "micro-framework",
+        "psr-11",
+        "psr-14",
+        "psr-15",
+        "router",
+        "di"
+    ],
+    "require": {
+        "php": ">=8.3",
+        "psr/container": "^2.0",
+        "psr/event-dispatcher": "^1.0",
+        "psr/http-message": "^2.0",
+        "psr/http-server-handler": "^1.0",
+        "psr/http-server-middleware": "^1.0",
+        "guzzlehttp/guzzle": "^7.8",
+        "guzzlehttp/psr7": "^2.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nitro\\": "src/Framework/",
+            "App\\": "src/App/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit tests"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
